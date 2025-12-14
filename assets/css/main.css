@@ -1047,7 +1047,7 @@ button:hover, .btn:hover {
   
   .footer-content {
     max-width: 800px;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
   }
   
   .footer-section {
