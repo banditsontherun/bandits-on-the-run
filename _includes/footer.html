@@ -11,22 +11,16 @@
         <h3 class="footer-title">Want to receive little letters from the bandits?</h3>
         <p>Sign up with your email address to receive little letters from yours truly, Bandits on the Run.</p>
         <div id="mc_embed_signup">
-          <form action="https://banditsontherun.us20.list-manage.com/subscribe/post?u=a706d2e6734b67dbb22013bca&amp;id=51647398a3&amp;f_id=00afd4edf0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate>
-            <div id="mc_embed_signup_scroll">
-              <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display: none;"></div>
-                <div class="response" id="mce-success-response" style="display: none;"></div>
-              </div>
-              <div class="mc-field-group input-button-wrapper" id="form-inputs">
-                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="" placeholder="Email Address">
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Join the mailing list for LITTLE LETTERS from Bandits">
-              </div>
-              <div id="success-message" style="display: none;">
-                <p class="success-text">Thank you for subscribing</p>
-              </div>
-              <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_a706d2e6734b67dbb22013bca_51647398a3" tabindex="-1" value=""></div>
-              <p class="privacy-text">We respect your privacy.</p>
+          <form action="https://banditsontherun.us20.list-manage.com/subscribe/post?u=a706d2e6734b67dbb22013bca&amp;id=51647398a3&amp;f_id=00afd4edf0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+            <div class="mc-field-group input-button-wrapper" id="form-inputs">
+              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address" autocomplete="email" required>
+              <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Join the mailing list for LITTLE LETTERS from Bandits">
             </div>
+            <div id="success-message" style="display: none;">
+              <p class="success-text">Thank you for subscribing!</p>
+            </div>
+            <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_a706d2e6734b67dbb22013bca_51647398a3" tabindex="-1" value=""></div>
+            <p class="privacy-text">We respect your privacy.</p>
           </form>
         </div>
       </div>
@@ -41,83 +35,36 @@
   </div>
 </footer>
 
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-<script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <script type="text/javascript">
 (function() {
   const form = document.getElementById('mc-embedded-subscribe-form');
-  const submitButton = document.getElementById('mc-embedded-subscribe');
   const formInputs = document.getElementById('form-inputs');
   const successMessage = document.getElementById('success-message');
-  const errorResponse = document.getElementById('mce-error-response');
+  const emailInput = document.getElementById('mce-EMAIL');
   
-  if (!form || !submitButton) return;
+  if (!form) return;
   
-  // Remove target="_blank" to prevent new tab
-  form.target = '_self';
-  
-  // Handle form submission
   form.addEventListener('submit', function(e) {
-    const emailInput = document.getElementById('mce-EMAIL');
-    const email = emailInput.value.trim();
+    const email = emailInput ? emailInput.value.trim() : '';
     
-    // Basic validation
+    // Only proceed if email is valid
     if (!email) {
       e.preventDefault();
-      errorResponse.style.display = 'block';
       return false;
     }
     
-    // Show loading state
-    submitButton.disabled = true;
-    submitButton.style.position = 'relative';
-    submitButton.style.color = 'transparent';
+    // Append email to URL to ensure it's passed
+    const formAction = form.action;
+    const separator = formAction.includes('?') ? '&' : '?';
+    form.action = formAction + separator + 'EMAIL=' + encodeURIComponent(email);
     
-    // Create loading spinner
-    if (!submitButton.querySelector('.spinner')) {
-      const spinner = document.createElement('span');
-      spinner.className = 'spinner';
-      spinner.style.position = 'absolute';
-      spinner.style.left = '50%';
-      spinner.style.top = '50%';
-      spinner.style.transform = 'translate(-50%, -50%)';
-      submitButton.appendChild(spinner);
-    }
-  });
-  
-  // Handle Mailchimp success response
-  const checkSuccess = setInterval(function() {
-    const successResponse = document.getElementById('mce-success-response');
-    // Check if Mailchimp has populated the success response (even if hidden)
-    if (successResponse && successResponse.textContent.trim() && successResponse.textContent.trim() !== '') {
-      clearInterval(checkSuccess);
-      
-      // Hide Mailchimp's default success message
-      successResponse.style.display = 'none';
-      
-      // Hide form inputs
+    // Show success message and hide form after a tiny delay to let form submit
+    setTimeout(function() {
       if (formInputs) formInputs.style.display = 'none';
-      
-      // Hide error message if visible
-      if (errorResponse) errorResponse.style.display = 'none';
-      
-      // Show our custom success message
       if (successMessage) successMessage.style.display = 'block';
-    }
-  }, 100);
-  
-  // Also listen for Mailchimp's callback
-  if (window.mcCallback) {
-    const originalCallback = window.mcCallback;
-    window.mcCallback = function(resp) {
-      if (resp && resp.result === 'success') {
-        if (formInputs) formInputs.style.display = 'none';
-        if (errorResponse) errorResponse.style.display = 'none';
-        if (successMessage) successMessage.style.display = 'block';
-      }
-      if (originalCallback) originalCallback(resp);
-    };
-  }
+      if (emailInput) emailInput.value = '';
+    }, 100);
+  });
 })();
 </script>
   

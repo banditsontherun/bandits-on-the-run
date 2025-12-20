@@ -956,24 +956,6 @@ button:hover, .btn:hover {
   text-align: left;
 }
 
-#mc_embed_signup #mce-error-response {
-  background-color: transparent;
-  color: #dc2626;
-  border: none;
-}
-
-#mc_embed_signup #mce-error-response * {
-  display: none;
-}
-
-#mc_embed_signup #mce-error-response::before {
-  content: "Email Address is required.";
-  display: block;
-}
-
-#mc_embed_signup #mce-success-response {
-  display: none !important;
-}
 
 .social-link {
   color: var(--color-text);
