@@ -11,17 +11,10 @@
         <h3 class="footer-title">Want to receive little letters from the bandits?</h3>
         <p>Sign up with your email address to receive little letters from yours truly, Bandits on the Run.</p>
         <div id="mc_embed_signup">
-          <form action="https://banditsontherun.us20.list-manage.com/subscribe/post?u=a706d2e6734b67dbb22013bca&amp;id=51647398a3&amp;f_id=00afd4edf0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-            <div class="mc-field-group input-button-wrapper" id="form-inputs">
-              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address" autocomplete="email" required>
-              <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Join the mailing list for LITTLE LETTERS from Bandits">
-            </div>
-            <div id="success-message" style="display: none;">
-              <p class="success-text">Thank you for subscribing!</p>
-            </div>
-            <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_a706d2e6734b67dbb22013bca_51647398a3" tabindex="-1" value=""></div>
-            <p class="privacy-text">We respect your privacy.</p>
-          </form>
+          <a href="https://banditsontherun.us20.list-manage.com/subscribe?u=a706d2e6734b67dbb22013bca&amp;id=51647398a3" target="_blank" class="button" id="mc-embedded-subscribe" style="display: inline-block; text-decoration: none; text-align: center;">
+            Join the mailing list for LITTLE LETTERS from Bandits
+          </a>
+          <p class="privacy-text">We respect your privacy.</p>
         </div>
       </div>
       
@@ -35,36 +28,4 @@
   </div>
 </footer>
 
-<script type="text/javascript">
-(function() {
-  const form = document.getElementById('mc-embedded-subscribe-form');
-  const formInputs = document.getElementById('form-inputs');
-  const successMessage = document.getElementById('success-message');
-  const emailInput = document.getElementById('mce-EMAIL');
-  
-  if (!form) return;
-  
-  form.addEventListener('submit', function(e) {
-    const email = emailInput ? emailInput.value.trim() : '';
-    
-    // Only proceed if email is valid
-    if (!email) {
-      e.preventDefault();
-      return false;
-    }
-    
-    // Append email to URL to ensure it's passed
-    const formAction = form.action;
-    const separator = formAction.includes('?') ? '&' : '?';
-    form.action = formAction + separator + 'EMAIL=' + encodeURIComponent(email);
-    
-    // Show success message and hide form after a tiny delay to let form submit
-    setTimeout(function() {
-      if (formInputs) formInputs.style.display = 'none';
-      if (successMessage) successMessage.style.display = 'block';
-      if (emailInput) emailInput.value = '';
-    }, 100);
-  });
-})();
-</script>
   
