@@ -1,0 +1,72 @@
+<header class="nav homepage-nav">
+  <!-- Navigation Overlay -->
+  <div class="nav-overlay">
+    <!-- Left: Navigation Links -->
+    <nav class="nav-menu-wrapper nav-left">
+      <ul class="nav-menu">
+        <li><a href="{{ "/about/" | absolute_url }}" class="nav-link">About</a></li>
+        <li><a href="{{ "/shows/" | absolute_url }}" class="nav-link">Live</a></li>
+        <li><a href="{{ "/videos/" | absolute_url }}" class="nav-link">Videos</a></li>
+        <li><a href="{{ "/music/" | absolute_url }}" class="nav-link">Music</a></li>
+        <li><a href="https://banditsontherunshop.com" class="nav-link">Store</a></li>
+        <li><a href="{{ "/contact/" | absolute_url }}" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Center: Logo -->
+    <div class="nav-brand-wrapper">
+      <a href="{{ "/" | absolute_url }}" class="nav-brand">
+        <img src="{{ "/assets/images/header-logo.webp" | absolute_url }}" alt="{{ site.title }}" class="nav-logo">
+      </a>
+    </div>
+    
+    <!-- Right: Social Icons -->
+    <div class="nav-social-wrapper">
+      <ul class="nav-social">
+        {%- include social.html style="header" -%}
+      </ul>
+    </div>
+    
+    <!-- Mobile menu toggle -->
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+    </button>
+  </div>
+
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay">
+  <!-- Mobile Logo in top-left corner -->
+  <div class="mobile-logo-wrapper">
+    <img src="{{ "/assets/images/header-logo.webp" | absolute_url }}" alt="{{ site.title }}" class="mobile-logo">
+  </div>
+  
+  <!-- New Mobile X Button -->
+  <button class="mobile-x-button" aria-label="Close mobile menu">
+    <span class="mobile-x-line"></span>
+    <span class="mobile-x-line"></span>
+  </button>
+  
+  <div class="mobile-menu-content">
+    <nav class="mobile-nav-menu">
+      <ul class="mobile-nav-list">
+        <li><a href="{{ "/about/" | absolute_url }}" class="mobile-nav-link">About</a></li>
+        <li><a href="{{ "/shows/" | absolute_url }}" class="mobile-nav-link">Live</a></li>
+        <li><a href="{{ "/videos/" | absolute_url }}" class="mobile-nav-link">Videos</a></li>
+        <li><a href="{{ "/music/" | absolute_url }}" class="mobile-nav-link">Music</a></li>
+        <li><a href="https://banditsontherunshop.com" class="mobile-nav-link">Store</a></li>
+        <li><a href="{{ "/contact/" | absolute_url }}" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- Mobile Social Icons - Moved to bottom -->
+  <div class="mobile-social-wrapper">
+    <ul class="mobile-social">
+      {%- include social.html style="header" -%}
+    </ul>
+  </div>
+  </header>
+  

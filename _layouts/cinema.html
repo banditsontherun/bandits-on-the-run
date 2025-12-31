@@ -4,52 +4,52 @@ layout: default
 
 <link rel="stylesheet" href="{{ "/assets/css/cinema.css" | absolute_url}}">
 
-{{ content }}
-
-<div class="cinema-container">
-  <div class="cinema-screen">
-    <div class="carousel" id="cinema-carousel">
-      <div class="carousel-slide active">
-        <iframe src="https://www.youtube.com/embed/SWPZsIWlggQ?enablejsapi=1" allowfullscreen title="You Have Changed"></iframe>
+<main class="container">
+  <div class="cinema-container">
+    <div class="cinema-screen">
+      <div class="carousel" id="cinema-carousel">
+        <div class="carousel-slide active">
+          <iframe src="https://www.youtube.com/embed/SWPZsIWlggQ?enablejsapi=1" allowfullscreen title="You Have Changed"></iframe>
+        </div>
+        <div class="carousel-slide">
+          <iframe src="https://www.youtube.com/embed/pU5cLllInVY?enablejsapi=1" allowfullscreen title="Radio, A Tiny Desk Transmission"></iframe>
+        </div>
+        <div class="carousel-slide">
+          <iframe src="https://www.youtube.com/embed/Z_5PJFWpuKQ?enablejsapi=1" allowfullscreen title="She's The Queen"></iframe>
+        </div>
+        <div class="carousel-slide">
+          <iframe src="https://www.youtube.com/embed/YcHSq6VYTk0?enablejsapi=1" allowfullscreen title="Sing You To Sleep"></iframe>
+        </div>
+        <div class="carousel-slide">
+          <iframe src="https://www.youtube.com/embed/vxSIUxVXxVM?enablejsapi=1" allowfullscreen title="We Battle Giants"></iframe>
+        </div>
+        <div class="carousel-slide">
+          <iframe src="https://www.youtube.com/embed/c2L201CklNQ?enablejsapi=1" allowfullscreen title="Spellbound"></iframe>
+        </div>
+        <div class="carousel-slide">
+          <iframe src="https://www.youtube.com/embed/BgGUv-oOu_4?enablejsapi=1" allowfullscreen title="Love in the Underground"></iframe>
+        </div>
       </div>
-      <div class="carousel-slide">
-        <iframe src="https://www.youtube.com/embed/pU5cLllInVY?enablejsapi=1" allowfullscreen title="Radio, A Tiny Desk Transmission"></iframe>
-      </div>
-      <div class="carousel-slide">
-        <iframe src="https://www.youtube.com/embed/Z_5PJFWpuKQ?enablejsapi=1" allowfullscreen title="She's The Queen"></iframe>
-      </div>
-      <div class="carousel-slide">
-        <iframe src="https://www.youtube.com/embed/YcHSq6VYTk0?enablejsapi=1" allowfullscreen title="Sing You To Sleep"></iframe>
-      </div>
-      <div class="carousel-slide">
-        <iframe src="https://www.youtube.com/embed/vxSIUxVXxVM?enablejsapi=1" allowfullscreen title="We Battle Giants"></iframe>
-      </div>
-      <div class="carousel-slide">
-        <iframe src="https://www.youtube.com/embed/c2L201CklNQ?enablejsapi=1" allowfullscreen title="Spellbound"></iframe>
-      </div>
-      <div class="carousel-slide">
-        <iframe src="https://www.youtube.com/embed/BgGUv-oOu_4?enablejsapi=1" allowfullscreen title="Love in the Underground"></iframe>
-      </div>
+      
+      <!-- Navigation Arrows -->
+      <button class="carousel-arrow left" onclick="showSlide(current - 1)" aria-label="Previous video">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-arrow right" onclick="showSlide(current + 1)" aria-label="Next video">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
-    
-    <!-- Navigation Arrows -->
-    <button class="carousel-arrow left" onclick="showSlide(current - 1)" aria-label="Previous video">
-      <i class="fas fa-chevron-left"></i>
-    </button>
-    <button class="carousel-arrow right" onclick="showSlide(current + 1)" aria-label="Next video">
-      <i class="fas fa-chevron-right"></i>
-    </button>
+    <div class="carousel-thumbnails" id="carousel-thumbnails">
+      <img src="https://i.ytimg.com/vi/SWPZsIWlggQ/hqdefault.jpg" class="active" alt="You Have Changed" onclick="showSlide(0)">
+      <img src="https://i.ytimg.com/vi/pU5cLllInVY/hqdefault.jpg" alt="Radio, A Tiny Desk Transmission" onclick="showSlide(1)">
+      <img src="https://i.ytimg.com/vi/Z_5PJFWpuKQ/hqdefault.jpg" alt="She's The Queen" onclick="showSlide(2)">
+      <img src="https://i.ytimg.com/vi/YcHSq6VYTk0/hqdefault.jpg" alt="Sing You To Sleep" onclick="showSlide(3)">
+      <img src="https://i.ytimg.com/vi/vxSIUxVXxVM/hqdefault.jpg" alt="We Battle Giants" onclick="showSlide(4)">
+      <img src="https://i.ytimg.com/vi/c2L201CklNQ/hqdefault.jpg" alt="Spellbound" onclick="showSlide(5)">
+      <img src="https://i.ytimg.com/vi/BgGUv-oOu_4/hqdefault.jpg" alt="Love in the Underground" onclick="showSlide(6)">
+    </div>
   </div>
-  <div class="carousel-thumbnails" id="carousel-thumbnails">
-    <img src="https://i.ytimg.com/vi/SWPZsIWlggQ/hqdefault.jpg" class="active" alt="You Have Changed" onclick="showSlide(0)">
-    <img src="https://i.ytimg.com/vi/pU5cLllInVY/hqdefault.jpg" alt="Radio, A Tiny Desk Transmission" onclick="showSlide(1)">
-    <img src="https://i.ytimg.com/vi/Z_5PJFWpuKQ/hqdefault.jpg" alt="She's The Queen" onclick="showSlide(2)">
-    <img src="https://i.ytimg.com/vi/YcHSq6VYTk0/hqdefault.jpg" alt="Sing You To Sleep" onclick="showSlide(3)">
-    <img src="https://i.ytimg.com/vi/vxSIUxVXxVM/hqdefault.jpg" alt="We Battle Giants" onclick="showSlide(4)">
-    <img src="https://i.ytimg.com/vi/c2L201CklNQ/hqdefault.jpg" alt="Spellbound" onclick="showSlide(5)">
-    <img src="https://i.ytimg.com/vi/BgGUv-oOu_4/hqdefault.jpg" alt="Love in the Underground" onclick="showSlide(6)">
-  </div>
-</div>
+</main>
 
 <script>
   const slides = document.querySelectorAll('.carousel-slide');

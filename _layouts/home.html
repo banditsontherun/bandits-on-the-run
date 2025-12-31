@@ -1,37 +1,64 @@
----
-layout: default
-title: Bandits on the Run
----
-<link rel="stylesheet" href="{{ "/assets/css/home.css" | absolute_url }}">
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<main class="homepage">
-  <section class="hero-section">
-    <div class="container">
-      <p class="hero-description">
-        Bandits on the Run is an indie-folk-pop-americana outfit consisting of three lead singers, a guitar, a cello, a suitcase drum, an accordion, and various toy instruments. They hail from Brooklyn, NY and are known for their vivacious performance style, genre-defying sound, soaring harmonies, and ability to make music-magic happen everywhere from subway platforms to concert halls.
-      </p>
-    </div>
-  </section>
+  {%- include head.html -%}
+  <link rel="stylesheet" href="/assets/css/home.css">
+  <script src="/assets/js/home.js" defer></script>
 
-  <section class="content-section">
-    <div class="container">
-      <div class="band-images">
-        <div class="band-image">
-          <img src="{{ "/assets/images/adrian.webp" | absolute_url }}" alt="Adrian from Bandits on the Run" loading="lazy">
-        </div>
-        <div class="band-image">
-          <img src="{{ "/assets/images/sydney.webp" | absolute_url}}" alt="Sydney from Bandits on the Run" loading="lazy">
-        </div>
-        <div class="band-image">
-          <img src="{{ "/assets/images/regina.webp" | absolute_url}}" alt="Regina from Bandits on the Run" loading="lazy">
-        </div>
-      </div>
-      
-      <div class="band-bio">
-        <p>
-          Bandits on the Run sprang from a chance encounter while busking in NYC's bustling subways, and burst onto the national stage in 2019 when their song, "Love in the Underground," was featured on the <strong>NPR Tiny Desk Contest's Top Shelf</strong>, proclaiming "the band orchestrates a symphony of sound and story through its impressive musicianship and marvelous harmonies." After recording their 2021 EP, <em>Now Is The Time</em>, with producer Ryan Hadlock (Brandi Carlile, The Lumineers) the Bandits took to the screen, devising a short musical film, <em>Band At The End Of The World,</em> commissioned by Prospect Musicals. Since then they have continued to explore the nexus of indie-folk and theatrical storytelling, composing music for the Netflix animated series, <em>Storybots</em>, scoring the movie, <em>The Same Storm</em>, adapting several songs from texts by William Shakespeare for a production of <em>As You Like It</em>, receiving an NEA grant for a new musical with Prospect Theater Company, all the while touring the globe with appearances at the <strong>Cambridge Folk Festival, Floydfest, Summerfest Milwaukee, Americanafest</strong>, <strong>F1 Singapore Grand Prix, Mile of Music, and the Rocky Mountain Folks Festival.</strong> Currently Bandits on the Run are working on the stage musical adaptation of the novel <em>What's Eating Gilbert Grape</em> in association with MCC Theater, alongside actor-musician Christopher Sears and Academy Award Nominee Peter Hedges, who wrote the original book and screenplay.
-        </p>
-      </div>
+  <body>
+
+    {%- include homepage-header.html -%}
+
+    <div class="blue-top">
+      <p class="top-blurb">Bandits on the Run is an indie-folk-pop-americana outfit</p>
     </div>
-  </section>
-</main>
+
+    <div class="homepage-content">
+        <section class="top-section">
+            <img class="bandits no-drop-shadow" src="/assets/images/home/bandits-on-cloud.png" alt="Sydney Adrian and Regina on a cloud">
+            <p class="blurb">Bandits on the Run is an indie-folk-pop-americana outfit consisting of three lead singers, a guitar, a cello, a suitcase drum, an accordion, and various toy instruments.</p>
+            <img class="cloud no-drop-shadow" src="/assets/images/home/cloud.png" alt="cloud">
+        </section>
+            <a class="liberty no-drop-shadow" href="/">
+                <img class="no-drop-shadow" src="/assets/images/home/liberty.png" alt="">
+            </a>
+            <a class="theater" href="/theater">
+                <img class="no-drop-shadow" src="/assets/images/home/city.png">
+            </a>
+            <a class="record" href="/music">
+                <img src="/assets/images/home/record-shop.png"
+                    data-hover-gif="/assets/gifs/music.gif"
+                    data-hover-static="/assets/images/home/music_last_frame.png">
+            </a>
+            <a class="movies" href="/videos">
+                <img src="/assets/images/home/movies.png"
+                    data-hover-gif="/assets/gifs/videos.gif"
+                    data-hover-static="/assets/images/home/videos_last_frame.png">
+            </a>
+            <a class="deli" href="/store">
+                <img class="bodega"
+                    src="/assets/images/home/deli.png"
+                    data-hover-gif="/assets/gifs/shop.gif"
+                    data-hover-static="/assets/images/home/shop_last_frame.png">
+            </a>
+            <a class="apt" href="/">
+                <img class="no-drop-shadow"  src="/assets/images/home/bandits-apt.png" alt="">
+            </a>
+            <a class="van" href="/shows">
+                <img src="/assets/images/home/van.png"
+                    data-hover-gif="/assets/gifs/shows.gif"
+                    data-hover-static="/assets/images/home/shows_last_frame.png">
+            </a>
+            <a class="mailbox" href="/contact">
+                <img src="/assets/images/home/mailbox.png"
+                    data-hover-gif="/assets/gifs/contact.gif"
+                    data-hover-static="/assets/images/home/contact_last_frame.png">
+            </a>
+        </section>
+      </div>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>

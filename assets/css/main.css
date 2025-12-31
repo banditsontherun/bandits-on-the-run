@@ -151,7 +151,6 @@ main {
   background-color: var(--color-background);
   margin-top: -2rem;
   padding-top: 2rem;
-  min-height: 60vh;
   flex: 1;
 }
 
@@ -520,7 +519,7 @@ button:hover, .btn:hover {
 .nav-overlay .nav-menu-wrapper {
   display: flex;
   align-items: center;
-  width: 33%;
+  flex-basis: 33%;
   justify-content: flex-start;
 }
 
@@ -558,13 +557,15 @@ button:hover, .btn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34%;
+  flex-basis: 34%;
+  max-width: 250px;
 }
 
 .nav-overlay .nav-brand {
   display: block;
   text-decoration: none;
   transition: opacity 0.2s ease;
+  width: 100%
 }
 
 .nav-overlay .nav-brand:hover {
@@ -573,8 +574,7 @@ button:hover, .btn:hover {
 
 .nav-overlay .nav-logo {
   height: 80px;
-  width: auto;
-  max-width: 250px;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -582,7 +582,8 @@ button:hover, .btn:hover {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 33%;
+  flex-basis: 33%;
+  flex-wrap: wrap;
 }
 
 .nav-overlay .nav-social {
@@ -796,6 +797,7 @@ button:hover, .btn:hover {
   justify-content: center;
   gap: 1.5rem; /* Increased gap between icons */
   flex-wrap: wrap;
+  height: 32px;
   /* Removed margin-bottom */
 }
 
@@ -872,7 +874,6 @@ button:hover, .btn:hover {
 #mc_embed_signup input[type="submit"],
 #mc_embed_signup #mc-embedded-subscribe {
   flex: 0 1 auto;
-  width: min(444px, 100%);
   min-width: 0;
   padding: 0 1.5rem;
   background-color: rgb(241, 208, 208);
@@ -886,11 +887,10 @@ button:hover, .btn:hover {
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.1s ease, color 0.2s ease;
   white-space: normal;
-  min-height: 60px;
   height: auto;
   font-family: var(--font-family-primary);
   box-sizing: border-box;
-  line-height: 1.4;
+  line-height: 3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1029,7 +1029,7 @@ button:hover, .btn:hover {
   
   .footer-content {
     max-width: 800px;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-sm);
   }
   
   .footer-section {

@@ -1,0 +1,107 @@
+/* About Styles - Squarespace Design Patterns */
+
+.homepage {
+  background-color: rgb(241, 208, 208); /* Light pink/peach background to match left webpage */
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: var(--spacing-xxl) 0 var(--spacing-xl);
+  text-align: center;
+  background: rgb(241, 208, 208); /* Light pink/peach background */
+}
+
+.hero-description {
+  font-size: 1.5rem; /* Bigger first paragraph */
+  line-height: 1.7;
+  color: var(--color-text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 300;
+  text-align: left; /* Left-aligned text */
+}
+
+/* Content Section */
+.content-section {
+  padding: 0;
+  background: rgb(241, 208, 208); /* Light pink/peach background */
+}
+
+.band-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.band-image {
+  text-align: center;
+}
+
+.band-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 0; /* No rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.band-image img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.band-bio {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.band-bio p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  text-align: left;
+  margin-bottom: var(--spacing-md);
+}
+
+.band-bio strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.band-bio em {
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+  }
+  
+  .hero-description {
+    font-size: 1.25rem;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .band-images {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-description {
+    font-size: 1.125rem;
+  }
+  
+  .content-section {
+    padding: var(--spacing-lg) 0;
+  }
+}

@@ -7,7 +7,7 @@
       <!-- Left: Navigation Links -->
       <nav class="nav-menu-wrapper nav-left">
         <ul class="nav-menu">
-          <li><a href="{{ "/" | absolute_url }}" class="nav-link">{{ page.nav_title | default: "About" }}</a></li>
+          <li><a href="{{ "/about/" | absolute_url }}" class="nav-link">About</a></li>
           <li><a href="{{ "/shows/" | absolute_url }}" class="nav-link">Live</a></li>
           <li><a href="{{ "/videos/" | absolute_url }}" class="nav-link">Videos</a></li>
           <li><a href="{{ "/music/" | absolute_url }}" class="nav-link">Music</a></li>
@@ -62,7 +62,8 @@
     <div class="mobile-menu-content">
       <nav class="mobile-nav-menu">
         <ul class="mobile-nav-list">
-          <li><a href="{{ "/" | absolute_url }}" class="mobile-nav-link">{{ page.nav_title | default: "About" }}</a></li>
+          <li><a href="{{ "/" | absolute_url }}" class="mobile-nav-link">Home</a></li>
+          <li><a href="{{ "/about/" | absolute_url }}" class="mobile-nav-link">About</a></li>
           <li><a href="{{ "/shows/" | absolute_url }}" class="mobile-nav-link">Live</a></li>
           <li><a href="{{ "/videos/" | absolute_url }}" class="mobile-nav-link">Videos</a></li>
           <li><a href="{{ "/music/" | absolute_url }}" class="mobile-nav-link">Music</a></li>
