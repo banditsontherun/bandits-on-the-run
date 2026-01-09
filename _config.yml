@@ -28,21 +28,24 @@ social_links:
   - title: Instagram
     url: https://instagram.com/banditsontherun
     icon: instagram
-  - title: Spotify
-    url: https://open.spotify.com/artist/40wE5c0s5AtxRwWXoPzBg6
-    icon: spotify
+  - title: TikTok
+    url: https://tiktok.com/@banditsontherun
+    icon: tiktok
   - title: YouTube
     url: https://youtube.com/channel/UCmZX2wCWFdCFwpCrtBm2R5Q
     icon: youtube
-  - title: Twitter
-    url: https://twitter.com/banditsontherun
-    icon: twitter
-  - title: SoundCloud
-    url: https://soundcloud.com/banditsontherun
-    icon: soundcloud
-  - title: Email
-    url: mailto:banditsontherun@gmail.com
-    icon: envelope
+  - title: Bandcamp
+    url: https://banditsontherun.bandcamp.com
+    icon: bandcamp
+  - title: Apple Music
+    url: https://music.apple.com/us/artist/bandits-on-the-run/1178327860
+    icon: apple 
+  - title: Tidal
+    url: https://tidal.com/artist/8284908
+    icon: tidal
+  - title: Spotify
+    url: https://open.spotify.com/artist/40wE5c0s5AtxRwWXoPzBg6
+    icon: spotify
 
 # Build settings
 # theme: minima  # Removed to use custom CSS framework
