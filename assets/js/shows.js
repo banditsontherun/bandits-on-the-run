@@ -134,11 +134,11 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="ticket-lineup" aria-label="Performance lineup">
               <div class="main-band" aria-label="Main act">Bandits on the Run</div>
-              ${show.featuring.length > 0 ? `
-                <div class="other-bands" aria-label="Supporting acts">
-                  featuring ${show.featuring.join(', ')}
+              ${show.description && `
+                <div class="other-bands" aria-label="Description">
+                  ${show.description}
                 </div>
-              ` : ''}
+              `}
             </div>
             <div class="ticket-details">
               <div class="ticket-location">
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="sr-only">
             Complete show information: Bandits on the Run at ${show.venueName} 
             on ${show.dayOfWeek}, ${show.date} at ${show.time}. 
-            ${show.featuring.length > 0 ? `Featuring ${show.featuring.join(', ')}.` : ''}
+            ${show.description && `${show.description}.`}
             ${show.location}, ${show.country}.
           </div>
         </article>
