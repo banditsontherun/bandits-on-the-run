@@ -113,13 +113,13 @@ img{
     bottom: 85vw;
     right: 2vw;
 }
-.record{
+.radio{
     position: absolute;
-    height: 20vw;
+    height: 27vw;
     bottom: 34vw;
-    left: 20vw;
+    left: 16vw;
     img {
-        height: 20vw;
+        height: 25vw;
     }
 }
 .van{
@@ -170,7 +170,7 @@ img{
 .post-office{
     position: absolute;
     height: 18vw;
-    bottom: 12vw;
+    bottom: 14vw;
     left: 16vw;
     img {
         height: 18vw;
