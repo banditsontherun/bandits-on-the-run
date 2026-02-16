@@ -131,9 +131,9 @@ img{
         height: 16vw;
     }
 }
-.mailbox{
+.phone-booth{
     position: absolute;
-    height: 13vw;
+    height: 14vw;
     bottom: 8vw;
     right: 38vw;
     img {
@@ -160,11 +160,20 @@ img{
 }
 .deli{
     position: absolute;
-    height: 20vw;
+    height: 21vw;
     bottom: 22vw;
-    right: 34vw;
+    right: 28vw;
     img {
         height: 20vw;
+    }
+}
+.post-office{
+    position: absolute;
+    height: 18vw;
+    bottom: 12vw;
+    left: 16vw;
+    img {
+        height: 18vw;
     }
 }
 .theater{
