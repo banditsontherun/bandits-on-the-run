@@ -7,15 +7,13 @@
 
 /* Hero Section */
 .hero-section {
-  padding: var(--spacing-xxl) 0 var(--spacing-xl);
   text-align: center;
-  background: rgb(241, 208, 208); /* Light pink/peach background */
 }
 
 .hero-description {
   font-size: 1.5rem; /* Bigger first paragraph */
   line-height: 1.7;
-  color: var(--color-text-light);
+  color: white;
   max-width: 800px;
   margin: 0 auto;
   font-weight: 300;
@@ -25,7 +23,7 @@
 /* Content Section */
 .content-section {
   padding: 0;
-  background: rgb(241, 208, 208); /* Light pink/peach background */
+  background: 
 }
 
 .band-images {
@@ -71,12 +69,12 @@
 
 .band-bio strong {
   font-weight: 600;
-  color: var(--color-text);
+  text-shadow: 0.2px 0.2px red;
 }
 
 .band-bio em {
   font-style: italic;
-  color: var(--color-text-light);
+  text-shadow: 0.2px 0.2px red;
 }
 
 /* Responsive Design */
