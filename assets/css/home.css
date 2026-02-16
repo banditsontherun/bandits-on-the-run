@@ -171,9 +171,18 @@ img{
     position: absolute;
     height: 21vw;
     bottom: 22vw;
-    right: 34vw;
+    right: 28vw;
     img {
         height: 20vw;
+    }
+}
+.post-office{
+    position: absolute;
+    height: 18vw;
+    bottom: 12vw;
+    left: 16vw;
+    img {
+        height: 18vw;
     }
 }
 .theater{
