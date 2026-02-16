@@ -393,26 +393,22 @@ button:hover, .btn:hover {
   opacity: 0.8;
 }
 
-.nav-logo {
-  height: 60px;
-  width: auto;
-  max-width: 200px;
-  object-fit: contain;
-}
-
-.nav-social-wrapper {
-  justify-self: end;
-  display: flex;
-  align-items: center;
-}
-
 .nav-social {
   display: flex;
   list-style: none;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
   margin: 0;
   padding: 0;
 }
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-md);
+  margin: 0;
+  padding: 0;
+}
+
 
 .nav-social-link {
   color: var(--nav-text-color);
@@ -513,8 +509,9 @@ button:hover, .btn:hover {
 .nav-overlay .nav-menu-wrapper {
   display: flex;
   align-items: center;
-  flex-basis: 33%;
+  flex-basis: 40%;
   justify-content: flex-start;
+  flex-grow: 1;
 }
 
 .nav-overlay .nav-menu {
@@ -551,8 +548,9 @@ button:hover, .btn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 34%;
-  max-width: 250px;
+  flex-basis: 18%;
+  max-width: 175px;
+  min-width: 80px;
 }
 
 .nav-overlay .nav-brand {
@@ -567,8 +565,8 @@ button:hover, .btn:hover {
 }
 
 .nav-overlay .nav-logo {
-  height: 80px;
   width: 100%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -576,17 +574,25 @@ button:hover, .btn:hover {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex-basis: 33%;
+  flex-basis: 40%;
   flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.nav-social-wrapper {
+  justify-self: end;
+  display: flex;
+  align-items: center;
 }
 
 .nav-overlay .nav-social {
   display: flex;
   list-style: none;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
   margin: 0;
   padding: 0;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-overlay .nav-social-link {
@@ -816,10 +822,6 @@ button:hover, .btn:hover {
     top: 1rem;
   }
   
-  .nav-overlay .nav-logo {
-    height: 40px;
-  }
-  
   .nav-overlay .nav-social-wrapper {
     display: none;
   }
@@ -878,11 +880,7 @@ button:hover, .btn:hover {
   .nav-overlay .nav-brand-wrapper {
     top: 1rem;
   }
-  
-  .nav-overlay .nav-logo {
-    height: 40px;
-  }
-  
+
   .nav-overlay .nav-social-wrapper {
     display: none;
   }
