@@ -52,11 +52,13 @@ body {
   --color-secondary: #666666;
   --color-accent: #000000;
   --color-background: rgb(44, 125, 153);
-  --color-text: #333333;
-  --color-text-light: #666666;
+  --color-text: white;
+  --color-text-light: rgb(232, 175, 212);
   --color-border: #e0e0e0;
-  --color-link: #000000;
-  --color-link-hover: #666666;
+  --color-link: white;
+  --color-link-hover: var(--color-text-light);
+  --color-link-nav: rgb(241, 208, 208);
+  --color-link-nav-hover: rgba(241, 208, 208, 0.8);
   
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -126,12 +128,14 @@ p {
 
 a {
   color: var(--color-link);
-  text-decoration: none;
+  text-shadow: 0.2px 0.2px red;
+  text-decoration: underline;
   transition: color 0.2s ease;
 }
 
 a:hover {
   color: var(--color-link-hover);
+  text-shadow: 0.2px 0.2px white;
 }
 
 small {
@@ -302,6 +306,10 @@ button:hover, .btn:hover {
 /* Navigation */
 .nav {
   z-index: 100;
+}
+
+.nav a {
+  text-shadow: none;
 }
 
 .nav-banner {
@@ -517,7 +525,7 @@ button:hover, .btn:hover {
 .nav-overlay .nav-menu {
   display: flex;
   list-style: none;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
@@ -737,11 +745,11 @@ button:hover, .btn:hover {
 }
 
 .social-link--header {
-  color: rgb(241, 208, 208); 
+  color: var(--color-link-nav); 
 }
 
 .social-link--header:hover {
-  color: rgba(241, 208, 208, 0.8); /* slightly transparent version for hover */
+  color: var(--color-nav-link-hover); /* slightly transparent version for hover */
 }
 
 /* Removed copyright section styles - no longer needed */
