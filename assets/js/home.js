@@ -60,15 +60,18 @@
 
   function positionActive(e){
     if (!active) return;
-    const x = e.clientX + OFFSET_X;
+    let x = e.clientX + OFFSET_X;
     const y = e.clientY + OFFSET_Y;
+    if (e.target.classList.contains("backwards-label")){
+      x -= 140;
+    } 
     active.wrapper.style.left = x + 'px';
     active.wrapper.style.top = y + 'px';
   }
 
   function removeActive(){
     if (!active) return;
-    console.log(active)
+    // console.log(active)
     if (active.swapTimer) {
       clearTimeout(active.swapTimer);
       active.swapTimer = null;
