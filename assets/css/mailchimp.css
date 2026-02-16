@@ -18,6 +18,10 @@
   max-width: 800px !important;
 }
 
+#mc_embed_signup .mc-field-group input {
+    color: black;
+}
+
 #mc_embed_signup .mc-field-group {
   margin-bottom: 1rem;
   width: 100%;
