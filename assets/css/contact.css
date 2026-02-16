@@ -14,14 +14,6 @@
   min-width: 300px;
 }
 
-.contact-section h2 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  letter-spacing: 0.5px;
-}
-
 .contact-info {
   margin-bottom: 1rem;
 }
@@ -30,17 +22,10 @@
   margin-bottom: 0;
 }
 
-.contact-name {
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 0.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
 .contact-page .contact-phone,
 .contact-page .contact-email {
   display: block;
-  color: rgb(222, 33, 21);
+  color: var(--color-link-nav);
   text-decoration: none;
   margin: 0.25rem 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -48,11 +33,12 @@
   font-weight: normal;
   text-transform: none;
   letter-spacing: normal;
+  text-shadow: none;
 }
 
 .contact-page .contact-phone:hover,
 .contact-page .contact-email:hover {
-  color: #8b0000;
+  color: var(--color-link-nav-hover);
   text-decoration: underline;
 }
 
