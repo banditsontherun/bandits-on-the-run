@@ -407,6 +407,7 @@ button:hover, .btn:hover {
   gap: var(--spacing-md);
   margin: 0;
   padding: 0;
+  flex-direction: row-reverse;
 }
 
 .nav-menu {
