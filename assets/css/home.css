@@ -148,6 +148,15 @@ img{
         height: 13vw;
     }
 }
+.guitar-case{
+    position: absolute;
+    height: 10vw;
+    bottom: 3vw;
+    right: 47vw;
+    img {
+        height: 10vw;
+    }
+}
 .apt{
     position: absolute;
     height: 26vw;
