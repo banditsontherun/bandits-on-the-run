@@ -21,7 +21,6 @@ section.top-section{
 }
 p.blurb{
     position: relative;
-    top: 10vw;
     left: 50vw;
     width: 40vw;
     font-size: calc(max(calc(min(22px, 1.5vw)), 17px));
@@ -40,13 +39,11 @@ p.blurb{
 }
 @media screen and (max-width: 1000px) {
     .homepage-content{
-        top: 100px;
         margin-bottom: 100px;
     }
 }
 @media screen and (max-width: 800px) {
     .homepage-content{
-        top: 150px;
         margin-bottom: 150px;
     }
 }
