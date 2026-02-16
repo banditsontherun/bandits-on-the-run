@@ -11,7 +11,13 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
+  background-color: rgb(44, 125, 153);
+  background-image: url('/assets/images/home/sky.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: bottom;
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
@@ -19,12 +25,12 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   color: var(--color-text);
-  background-color: rgb(241, 208, 208);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 /* CSS Custom Properties */
@@ -45,7 +51,7 @@ body {
   --color-primary: #333333;
   --color-secondary: #666666;
   --color-accent: #000000;
-  --color-background: rgb(241, 208, 208);
+  --color-background: rgb(44, 125, 153);
   --color-text: #333333;
   --color-text-light: #666666;
   --color-border: #e0e0e0;
@@ -67,12 +73,12 @@ body {
   
   /* Navigation */
   --nav-height: 80px;
-  --nav-background: rgb(241, 208, 208);
+  --nav-background: rgb(44, 125, 153);
   --nav-text-color: #333333;
   --nav-hover-color: #666666;
   
   /* Footer */
-  --footer-background: rgb(241, 208, 208);
+  --footer-background:rgb(44, 125, 153);
   --footer-text-color: #666666;
   --footer-padding: 3rem 0;
   
@@ -148,14 +154,12 @@ small {
 
 /* Main Content */
 main {
-  background-color: var(--color-background);
   margin-top: -2rem;
   padding-top: 2rem;
   flex: 1;
 }
 
 .content-wrapper {
-  background-color: var(--color-background);
   padding: var(--section-padding);
   margin: 0 auto;
   max-width: var(--container-max-width);
@@ -269,7 +273,6 @@ input, textarea, select {
   padding: var(--input-padding);
   border: var(--input-border);
   border-radius: var(--input-border-radius);
-  background-color: var(--color-background);
   color: var(--color-text);
   transition: border-color 0.2s ease;
 }
@@ -342,12 +345,6 @@ button:hover, .btn:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   color: rgb(241, 208, 208);
   font-family: "aktiv-grotesk", "Helvetica Neue", Arial, sans-serif;
-}
-
-.nav-bar {
-  background-color: var(--nav-background);
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -629,8 +626,7 @@ button:hover, .btn:hover {
 
 /* Footer */
 .footer {
-  background-color: rgb(241, 208, 208); /* Light pink/peach background to match site */
-  padding: 2rem 0; /* Reduced from 4rem to match original spacing */
+  padding: 2rem 0; 
   text-align: center;
 }
 
@@ -689,89 +685,6 @@ button:hover, .btn:hover {
   display: flex;
   gap: var(--spacing-sm);
 }
-
-.footer-form input {
-  flex: 1;
-  padding: var(--input-padding);
-  border: var(--input-border);
-  border-radius: var(--input-border-radius);
-  font-size: var(--font-size-base);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  background-color: #ffffff; /* White background for email input */
-}
-
-.footer-form input:focus {
-  outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-}
-
-.footer-form input.has-error {
-  border-color: #dc3545;
-}
-
-.footer-form button {
-  padding: 0.875rem 1.5rem; /* Increased padding for taller button */
-  background-color: transparent; /* Clear background */
-  color: #dc2626; /* Red text to match outline */
-  border: 2px solid #dc2626; /* Red outline */
-  border-radius: 0; /* Square corners */
-  font-size: var(--font-size-small);
-  font-weight: 500;
-  text-transform: none; /* Remove uppercase to match sentence case */
-  letter-spacing: 0.02em; /* Reduced letter spacing */
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease, color 0.2s ease;
-  white-space: nowrap;
-  min-width: 320px; /* Increased button width to fit content */
-  min-height: 48px; /* Use min-height instead of fixed height */
-  display: inline-block; /* Use inline-block instead of flex */
-  vertical-align: middle; /* Align with input field */
-}
-
-.footer-form button:hover {
-  background-color: #dc2626; /* Solid red background on hover */
-  color: white; /* White text on hover */
-  transform: translateY(-1px);
-}
-
-.footer-form button:active {
-  transform: translateY(0);
-}
-
-.footer-form button:disabled {
-  background-color: var(--color-border);
-  cursor: not-allowed;
-  transform: none;
-}
-
-.error-message {
-  display: none;
-  color: #dc3545;
-  font-size: var(--font-size-small);
-  margin-bottom: var(--spacing-xs);
-  text-align: left;
-  width: 100%;
-  background-color: rgb(241, 208, 208);
-  border: 1px solid #dc3545;
-  padding: 0.5rem;
-  border-radius: 4px;
-}
-
-.success-message {
-  background-color: #d4edda;
-  color: #155724;
-  padding: var(--spacing-sm);
-  border-radius: var(--input-border-radius);
-  border: 1px solid #c3e6cb;
-  margin-top: var(--spacing-sm);
-}
-
-.success-message p {
-  margin: 0;
-  font-size: var(--font-size-small);
-}
-
 .footer-contact {
   color: var(--color-text);
   font-size: var(--font-size-small);
@@ -1254,7 +1167,7 @@ button:hover, .btn:hover {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(241, 208, 208, 0.95);
+  background-color: var(--color-background);
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
