@@ -645,6 +645,8 @@ button, .btn {
 .footer {
   padding: 2rem 0; 
   text-align: center;
+  width: 90vw;
+  margin: auto;
 }
 
 .footer-content {
@@ -725,7 +727,7 @@ button, .btn {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1.5rem; /* Increased gap between icons */
+  gap: var(--spacing-sm);
   flex-wrap: wrap;
   height: 32px;
   /* Removed margin-bottom */
@@ -785,10 +787,6 @@ button, .btn {
   
   .footer-content {
     gap: 1rem; /* Slightly reduced but still generous */
-  }
-  
-  .footer-section {
-    max-width: 500px;
   }
 }
 
