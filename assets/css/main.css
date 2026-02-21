@@ -33,6 +33,22 @@ body {
   scroll-behavior: smooth;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column { 
+  flex-direction: column;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
 /* CSS Custom Properties */
 :root {
   /* Typography */
