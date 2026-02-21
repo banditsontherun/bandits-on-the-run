@@ -162,6 +162,11 @@ main {
   flex: 1;
 }
 
+.content-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .content-wrapper {
   padding: var(--section-padding);
   margin: 0 auto;
