@@ -232,6 +232,11 @@ main {
   grid-template-columns: 1fr;
 }
 
+/* text utilities */
+.justify {
+  text-align: justify;
+}
+
 /* Flexbox Utilities */
 .flex {
   display: flex;
