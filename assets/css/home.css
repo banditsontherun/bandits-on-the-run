@@ -128,10 +128,19 @@ img{
 .phone-booth{
     position: absolute;
     height: 14vw;
-    bottom: 8vw;
-    right: 38vw;
+    bottom: 7vw;
+    right: 39vw;
     img {
         height: 13vw;
+    }
+}
+.cello-case{
+    position: absolute;
+    height: 10vw;
+    bottom: 3vw;
+    right: 47vw;
+    img {
+        height: 10vw;
     }
 }
 .apt{
@@ -146,7 +155,7 @@ img{
 .movies{
     position: absolute;
     height: 22vw;
-    bottom: 42vw;
+    bottom: 44vw;
     right: 22vw;
     img {
         height: 20vw;
@@ -154,8 +163,8 @@ img{
 }
 .deli{
     position: absolute;
-    height: 21vw;
-    bottom: 22vw;
+    height: 19vw;
+    bottom: 26vw;
     right: 28vw;
     img {
         height: 20vw;
