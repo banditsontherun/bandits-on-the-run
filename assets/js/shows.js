@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Available ticket style themes
   const ticketStyles = [
     'ticket-classic',  // Clean, traditional ticket look
-    'ticket-neon',     // Bright, vibrant colors
+    'ticket-hearts',     // Bright, vibrant colors
     'ticket-vintage',  // Retro, aged paper style
     'ticket-indie', // Modern, playful design with pastel accents
     'ticket-coffee',   // Warm, cafe-inspired theme
