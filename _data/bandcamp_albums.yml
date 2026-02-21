@@ -1,0 +1,26 @@
+# Paste embed_src from each album's Bandcamp page: Share/Embed → "embed this album" → copy the iframe src
+# Paste cover_url from the album art image, or add local images under assets/images/albums/
+- title: "The Shakespeare Tapes"
+  embed_src: "https://bandcamp.com/EmbeddedPlayer/album=902351595/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/"
+  cover_url: "/assets/images/music/the-shakespeare-tapes.jpg"
+  album_url: "https://banditsontherun.bandcamp.com/album/the-shakespeare-tapes"
+
+- title: "Now is the Time!"
+  embed_src: "https://bandcamp.com/EmbeddedPlayer/album=2012633522/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/"
+  cover_url: "/assets/images/music/now-is-the-time.jpg"
+  album_url: "https://banditsontherun.bandcamp.com/album/now-is-the-time"
+
+- title: "Bandits Live at the Power Station"
+  embed_src: "https://bandcamp.com/EmbeddedPlayer/album=3668511445/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/"
+  cover_url: "/assets/images/music/live-at-the-power-station.jpg"
+  album_url: "https://banditsontherun.bandcamp.com/album/bandits-live-at-the-power-station"
+
+- title: "Love in the Underground"
+  embed_src: "https://bandcamp.com/EmbeddedPlayer/album=3531796531/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/"
+  cover_url: "/assets/images/music/love-in-the-underground.jpg"
+  album_url: "https://banditsontherun.bandcamp.com/album/love-in-the-underground"
+
+- title: "The Criminal Record"
+  embed_src: "https://bandcamp.com/EmbeddedPlayer/album=2841072597/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/"
+  cover_url: "/assets/images/music/the-criminal-record.jpg"
+  album_url: "https://banditsontherun.bandcamp.com/album/the-criminal-record"

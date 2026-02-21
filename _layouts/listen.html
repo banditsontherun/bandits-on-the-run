@@ -4,43 +4,126 @@ layout: default
 
 <link rel="stylesheet" href="{{ "/assets/css/music-embed.css" | absolute_url}}">
 
-<main class="container">
+<main class="container page-music">
   <div class="main-container">
-    <div id="loading-spinner" class="loading-spinner">
-      <div class="spinner"></div>
-      <p>Loading music...</p>
+    {% assign albums = site.data.bandcamp_albums %}
+    {% if albums.size > 0 %}
+    <div id="album-strip" class="album-strip">
+      {% for album in albums %}
+      <button type="button"
+        class="album-cover{% if forloop.first %} selected{% endif %}"
+        data-index="{{ forloop.index0 }}"
+        data-embed-src="{{ album.embed_src | escape }}"
+        data-title="{{ album.title | escape }}"
+        aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"
+        aria-label="Play {{ album.title | escape }}">
+        {% if album.cover_url != "" %}
+        <img src="{{ album.cover_url }}" alt="{{ album.title | escape }}" loading="lazy">
+        {% else %}
+        <span class="album-cover-placeholder" title="{{ album.title | escape }}">{{ album.title | truncate: 15 }}</span>
+        {% endif %}
+      </button>
+      {% endfor %}
     </div>
-    
-    <iframe id="spotify-iframe" 
-      src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fopen.spotify.com%2Fembed%2Fartist%2F40wE5c0s5AtxRwWXoPzBg6&display_name=Spotify&url=https%3A%2F%2Fopen.spotify.com%2Fartist%2F40wE5c0s5AtxRwWXoPzBg6&image=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6761610000e5eb7a5353e689a94e4ccab2f7e1&key=61d05c9d54e8455ea7a9677c366be814&type=text%2Fhtml&schema=spotify&wmode=opaque" 
-      width="100%" 
-      height="500px" 
-      scrolling="no" 
-      title="Spotify embed" 
-      frameborder="0" 
-      allow="autoplay; fullscreen" 
-      allowfullscreen="true"
-      style="display: none;">
-    </iframe>
+
+    <div class="embed-wrapper">
+      <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+      </div>
+      <iframe id="bandcamp-iframe"
+        src="about:blank"
+        width="100%"
+        height="400px"
+        style="border: 0;"
+        seamless
+        title="Bandcamp album player">
+      </iframe>
+    </div>
+    {% endif %}
   </div>
 </main>
 
+{% if albums.size > 0 %}
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const iframe = document.getElementById('spotify-iframe');
-  const spinner = document.getElementById('loading-spinner');
-  
-  iframe.addEventListener('load', function() {
-    spinner.style.display = 'none';
-    iframe.style.display = 'block';
-  });
-  
-  // Fallback: hide spinner after 10 seconds if iframe doesn't load
-  setTimeout(function() {
-    if (spinner.style.display !== 'none') {
+(function() {
+  var albums = {{ site.data.bandcamp_albums | jsonify }};
+  var strip = document.getElementById('album-strip');
+  var iframe = document.getElementById('bandcamp-iframe');
+  var spinner = document.getElementById('loading-spinner');
+  var covers = strip ? strip.querySelectorAll('.album-cover') : [];
+  var selectedIndex = 0;
+  var isLoading = false;
+  var loadTimeout;
+
+  function setLoading(loading) {
+    isLoading = loading;
+    strip.classList.toggle('loading', loading);
+    spinner.style.display = loading ? 'flex' : 'none';
+    if (loading) {
+      iframe.style.display = 'none';
+      loadTimeout = setTimeout(function() {
+        if (isLoading) {
+          setLoading(false);
+          iframe.style.display = 'block';
+        }
+      }, 10000);
+    } else {
+      clearTimeout(loadTimeout);
+      iframe.style.display = 'block';
+    }
+  }
+
+  function selectAlbum(index) {
+    if (isLoading || index === selectedIndex) return;
+    var album = albums[index];
+    var src = album.embed_src || '';
+    selectedIndex = index;
+
+    covers.forEach(function(btn, i) {
+      btn.classList.toggle('selected', i === index);
+      btn.setAttribute('aria-pressed', i === index);
+    });
+
+    setLoading(true);
+    iframe.src = src || 'about:blank';
+
+    if (src) {
+      iframe.onload = function() {
+        iframe.onload = null;
+        setLoading(false);
+      };
+    } else {
+      setLoading(false);
+    }
+  }
+
+  if (strip && covers.length) {
+    covers.forEach(function(btn, i) {
+      btn.addEventListener('click', function() { selectAlbum(i); });
+    });
+
+    var initialSrc = albums[0] && albums[0].embed_src;
+    if (initialSrc) {
+      spinner.style.display = 'flex';
+      iframe.style.display = 'none';
+      iframe.onload = function() {
+        iframe.onload = null;
+        spinner.style.display = 'none';
+        iframe.style.display = 'block';
+      };
+      iframe.src = initialSrc;
+      loadTimeout = setTimeout(function() {
+        if (spinner.style.display !== 'none') {
+          spinner.style.display = 'none';
+          iframe.style.display = 'block';
+        }
+      }, 10000);
+    } else {
       spinner.style.display = 'none';
       iframe.style.display = 'block';
     }
-  }, 10000);
-});
+  }
+})();
 </script>
+{% endif %}
