@@ -58,7 +58,7 @@ body {
   --color-link: white;
   --color-link-hover: var(--color-text-light);
   --color-link-nav: rgb(241, 208, 208);
-  --color-link-nav-hover: rgba(241, 208, 208, 0.8);
+  --color-link-nav-hover: rgb(233, 224, 224);
   
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -299,10 +299,6 @@ button, .btn {
   display: inline-block;
 }
 
-button:hover, .btn:hover {
-  background-color: var(--color-link-hover);
-}
-
 /* Navigation */
 .nav {
   z-index: 100;
@@ -493,14 +489,23 @@ button:hover, .btn:hover {
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  background-color: none;
 }
 
 .nav-toggle-line {
   width: 100%;
   height: 3px;
-  background-color: var(--nav-text-color);
+  background-color: var(--color-link-nav);
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+.nav-toggle:hover {
+  background-color: none;
+
+  .nav-toggle-line {
+    background-color: var(--color-link-hover);
+  }
 }
 
 /* New Overlay Navigation Styles */
@@ -640,6 +645,8 @@ button:hover, .btn:hover {
 .footer {
   padding: 2rem 0; 
   text-align: center;
+  width: 90vw;
+  margin: auto;
 }
 
 .footer-content {
@@ -720,7 +727,7 @@ button:hover, .btn:hover {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1.5rem; /* Increased gap between icons */
+  gap: var(--spacing-sm);
   flex-wrap: wrap;
   height: 32px;
   /* Removed margin-bottom */
@@ -750,7 +757,7 @@ button:hover, .btn:hover {
 }
 
 .social-link--header:hover {
-  color: var(--color-nav-link-hover); /* slightly transparent version for hover */
+  color: var(--color-link-nav-hover); /* slightly transparent version for hover */
 }
 
 /* Removed copyright section styles - no longer needed */
@@ -780,10 +787,6 @@ button:hover, .btn:hover {
   
   .footer-content {
     gap: 1rem; /* Slightly reduced but still generous */
-  }
-  
-  .footer-section {
-    max-width: 500px;
   }
 }
 
@@ -1057,7 +1060,6 @@ button:hover, .btn:hover {
 }
 
 .mobile-nav-link {
-  color: #333;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.25rem;
@@ -1065,10 +1067,11 @@ button:hover, .btn:hover {
   letter-spacing: 0.1em;
   transition: color 0.2s ease;
   font-family: "aktiv-grotesk", "Helvetica Neue", Arial, sans-serif;
+  color: var(--color-link-nav);
 }
 
 .mobile-nav-link:hover {
-  color: #666;
+  color: var(--color-link-nav-hover);
 }
 
 .mobile-social-wrapper {
@@ -1134,9 +1137,15 @@ button:hover, .btn:hover {
   position: absolute;
   width: 100%;
   height: 3px;
-  background-color: #333;
+  background-color: var(--color-link-nav);
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+.mobile-x-button:hover {
+  .mobile-x-line {
+    background-color: var(--color-link-nav-hover);
+  }
 }
 
 .mobile-x-line:first-child {
