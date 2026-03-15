@@ -91,3 +91,14 @@
     document.querySelectorAll('img[data-hover-gif][data-hover-static]').forEach(attach);
   });
 })();
+
+
+const banditsIntroBios = [
+  'Bandits on the Run is an indie-folk-pop-americana outfit consisting of three lead singers, a guitar, a cello, a suitcase drum, an accordion, and various toy instruments.',
+];
+
+document.addEventListener('DOMContentLoaded', function() {
+  const cta = document.querySelector('#blurb');
+  const index = Math.floor(Math.random() * banditsIntroBios.length);
+  cta.innerHTML = banditsIntroBios[index];
+});

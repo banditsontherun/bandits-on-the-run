@@ -13,7 +13,7 @@
 section.top-section{
     display: flex
 }
-p.blurb{
+p#blurb{
     position: relative;
     left: 50vw;
     width: 40vw;
@@ -70,7 +70,7 @@ p.blurb{
             top: 30px;
         }
     }
-    .blurb{
+    #blurb{
         display:none;
     }
 }
