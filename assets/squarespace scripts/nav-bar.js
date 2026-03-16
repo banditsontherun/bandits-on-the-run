@@ -37,7 +37,7 @@ CONTACT
   </div>
 <div class="header-nav-item header-nav-item--collection">
 <a href="https://banditsontherun.com/newsletter" data-animation-role="header-element">
-NEWSLETTER ✉️
+NEWSLETTER
   </a>
   </div>
   <div class="header-nav-item header-nav-item--collection">
@@ -122,7 +122,7 @@ CONTACT
   </a>
 <a href="https://banditsontherun.com/newsletter">
 <div class="header-menu-nav-item-content">
-NEWSLETTER ✉️
+NEWSLETTER
   </div>
   </a>
 <a href="https://banditsontherun.com/theatre">
