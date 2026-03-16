@@ -31,6 +31,14 @@ p#blurb{
         display: none;
     }
 }
+
+@media only screen and (hover: none) and (pointer: coarse) {
+  /* make gifs not display */
+    .hover-preview {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .homepage-content{
         margin-bottom: 100px;
