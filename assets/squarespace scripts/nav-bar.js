@@ -10,7 +10,7 @@
     const navLinksBlock1 = `
 <nav class="header-nav-list">
 <div class="header-nav-item header-nav-item--collection">
-<a href="https://banditsontherun.com">
+<a href="https://banditsontherun.com/about">
 ABOUT
   </a>
   </div>
@@ -40,11 +40,26 @@ CONTACT
 NEWSLETTER ✉️
   </a>
   </div>
+  <div class="header-nav-item header-nav-item--collection">
+<a href="https://banditsontherun.com/theatre" data-animation-role="header-element">
+THEATRE
+  </a>
+  </div>
+  <div class="header-nav-item header-nav-item--collection">
+<a href="https://banditsontherun.com/justice" data-animation-role="header-element">
+JUSTICE
+  </a>
+  </div>
   </nav>`;
     
     const navOnStorePage =`<div class="header-nav-item header-nav-item--collection header-nav-item--active ">
 <a href="/" data-animation-role="header-element"  data-animation-role="header-element" aria-current="page">
 STORE
+  </a>
+  </div>
+<div class="header-nav-item header-nav-item--collection">
+<a href="/donate" data-animation-role="header-element"  data-animation-role="header-element">
+DONATE
   </a>
   </div>
 `;
@@ -78,7 +93,7 @@ DONATE
   if (mobileMenu) {
     let mobileLinksBlock1 = `
 <div class="container header-menu-nav-item header-menu-nav-item--collection header-menu-nav-item--active header-menu-nav-item--homepage">
-<a href="https://banditsontherun.com">
+<a href="https://banditsontherun.com/about">
 <div class="header-menu-nav-item-content">
 ABOUT
   </div>
@@ -110,12 +125,27 @@ CONTACT
 NEWSLETTER ✉️
   </div>
   </a>
+<a href="https://banditsontherun.com/theatre">
+<div class="header-menu-nav-item-content">
+THEATRE
+  </div>
+  </a>
+<a href="https://banditsontherun.com/justice">
+<div class="header-menu-nav-item-content">
+JUSTICE
+  </div>
+  </a>
   </div>`;
 
   let mobileOnStorePage = ` 
 <a href="/" aria-current="page">
 <div class="header-menu-nav-item-content">
 STORE
+  </div>
+  </a>
+  <a href="/donate">
+<div class="header-menu-nav-item-content">
+DONATE
   </div>
   </a>`;
 
