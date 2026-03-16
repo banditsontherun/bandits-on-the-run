@@ -95,6 +95,23 @@
 
 const banditsIntroBios = [
   'Bandits on the Run is an indie-folk-pop-americana outfit consisting of three lead singers, a guitar, a cello, a suitcase drum, an accordion, and various toy instruments.',
+  "Bandits on the Run is a fan of YOU!",
+  "Bandits in the Run is part of your cool big sister’s record collection ",
+  "Bandits on the Run is  your friendly neighborhood genre-benders ",
+  "Bandits on the Run is dancing  in the liminal space between folk and anti-folk ",
+  "Bandits on the Run is three subway rats in a trenchcoat",
+  "Bandits on the Run is the daydream you have in orchestra class ",
+  "Bandits on the Run is America’s third favorite identical triplet band!",
+  "Bandits on the Run is a mini-symphony (put us in your pocket!)",
+  "Bandits on the Run is Fleetwood Mac if they got along! ",
+  "Bandits on the Run is Best Dressed of all the theatre kids at prom",
+  "Bandits on the Run is pretty cool actually (9 out of 10 dads agree) ",
+  "Bandits on the Run is a cello, an accordion, a guitar, a suitcase drum, an electric bass, shaky toy instruments, three best friends, a brave little toaster, and the adventure of a lifetime! (You’re the toaster)",
+  "Bandits on the Run have never actually done any criminal wrongdoing (except for the occasional banjo in their set) ",
+  "Bandits on the Run will steal your heart but don’t worry they’ll be gentle ",
+  "Bandits on the Run is a trio trilling troubadour tunes and trying their truest best ",
+  "Bandits on the Run is not a Paul McCartney cover band",
+  "Bandits on the Run is your new wanderlust soundtrack",
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -102,3 +119,5 @@ document.addEventListener('DOMContentLoaded', function() {
   const index = Math.floor(Math.random() * banditsIntroBios.length);
   cta.innerHTML = banditsIntroBios[index];
 });
+
+
